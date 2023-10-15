@@ -36,7 +36,6 @@ class CarManager:
 
     def is_collide(self, player_pos):
         for c in range(len(self.cars)):
-            print(f'car: {self.cars[c].pos()},\tplayer: {player_pos}')
             if self.cars[c].distance(player_pos) < 10:
                 print('collide')
                 return True

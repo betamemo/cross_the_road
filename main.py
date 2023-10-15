@@ -32,6 +32,6 @@ while game_is_on:
         game_is_on = False
 
     if player.is_finish(player.ycor()):
-        scoreboard.level_up()  # increase level
+        scoreboard.level_up()
 
 screen.exitonclick()
