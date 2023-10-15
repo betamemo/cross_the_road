@@ -21,7 +21,6 @@ class CarManager:
 
     def move(self):
         self.counter += 1
-
         if self.counter == 6:
             car = self.create_car()
             self.cars.append(car)
@@ -34,5 +33,4 @@ class CarManager:
     def is_collide(self, player_pos):
         for c in range(len(self.cars)):
             if self.cars[c].distance(player_pos) < 10:
-                print('collide')
                 return True
