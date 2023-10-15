@@ -7,6 +7,8 @@ from scoreboard import Scoreboard
 
 screen = Screen()
 screen.setup(width=600, height=600)
+screen.addshape('images/turtle.gif')
+screen.addshape('images/car.gif')
 screen.tracer(0)
 screen.listen()
 

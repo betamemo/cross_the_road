@@ -16,7 +16,8 @@ class CarManager:
     def create_car(self):
         car = Turtle()
         car.penup()
-        car.shape('square')
+        # car.shape('square')
+        car.shape('images/car.gif')
         car.color(random.choice(COLORS))
         car.goto(300, random.randint(-250, 250))
         return car

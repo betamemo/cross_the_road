@@ -9,7 +9,7 @@ class Player(Turtle):
     def __init__(self):
         super().__init__()
         self.penup()
-        # self.shape('image/turtle.gif')
+        self.shape('images/turtle.gif')
         self.goto(STARTING_POSITION)
 
     def go_up(self):
