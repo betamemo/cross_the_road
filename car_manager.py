@@ -1,7 +1,41 @@
+import random
+from turtle import Turtle
+
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
 
 
 class CarManager:
-    pass
+    def __init__(self):
+        self.cars = []
+        car = self.create_car()
+        self.cars.append(car)
+        self.counter = 0
+
+    def create_car(self):
+        car = Turtle()
+        car.penup()
+        car.shape('square')
+        car.color(random.choice(COLORS))
+        car.goto(300, random.randint(-250, 250))
+        return car
+
+    def move(self):
+        self.counter += 1
+
+        if self.counter == 6:
+            car = self.create_car()
+            self.cars.append(car)
+            self.counter = 0
+
+        for c in range(len(self.cars)):
+            self.cars[c].setheading(180)
+            self.cars[c].forward(20)
+
+    def is_collide(self, player_pos):
+        for c in range(len(self.cars)):
+            print(f'car: {self.cars[c].pos()},\tplayer: {player_pos}')
+            if self.cars[c].distance(player_pos) < 10:
+                print('collide')
+                return True
