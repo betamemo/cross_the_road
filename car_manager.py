@@ -32,5 +32,5 @@ class CarManager:
 
     def is_collide(self, player_pos):
         for c in range(len(self.cars)):
-            if self.cars[c].distance(player_pos) < 10:
+            if self.cars[c].distance(player_pos) < 30:
                 return True
