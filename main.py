@@ -9,13 +9,16 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.addshape('images/turtle.gif')
 screen.addshape('images/car.gif')
+screen.bgcolor('lightyellow')
 screen.tracer(0)
-screen.listen()
 
+# init game
 player = Player()
 car_manager = CarManager()
 scoreboard = Scoreboard()
 
+# controller
+screen.listen()
 screen.onkeypress(fun=player.go_up, key='Up')
 screen.onkeypress(fun=player.go_down, key='Down')
 
