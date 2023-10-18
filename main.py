@@ -34,7 +34,7 @@ while game_is_on:
         scoreboard.game_over()
         game_is_on = False
 
-    if player.is_finish(player.ycor()):
+    if player.is_finish():
         print('level up')
         scoreboard.level_up()
 

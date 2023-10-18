@@ -20,8 +20,8 @@ class Player(Turtle):
         self.setheading(270)
         self.forward(MOVE_DISTANCE)
 
-    def is_finish(self, y):
-        if FINISH_LINE_Y == y:
+    def is_finish(self):
+        if FINISH_LINE_Y == self.ycor():
             self.goto(STARTING_POSITION)
             return True
         return False
